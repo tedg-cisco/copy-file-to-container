@@ -1,5 +1,4 @@
 import os
-import requests
 
 def main():
     # Read environment variable
