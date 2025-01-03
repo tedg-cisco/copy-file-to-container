@@ -5,10 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy application files
-COPY main.py requirements.txt /app/
-
-# Install dependencies
-RUN pip install -r requirements.txt
+COPY main.py /app/
 
 # Define environment variable
 ENV MY_ENV_VAR=example_value
