@@ -7,6 +7,7 @@ pipeline {
     }
     environment {
         MY_ENV_VAR = 'HelloWorld'
+         HOME = "${env.WORKSPACE}"
     }
     stages {
         stage('Checkout') {
