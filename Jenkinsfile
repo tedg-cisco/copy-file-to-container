@@ -18,9 +18,9 @@ pipeline {
             steps {
                 script {
                     sh 'docker --version'
-                    sh 'python3 --version'
-                    // sh 'echo "Installing Python dependencies..."'
-                    // sh 'pip install -r app/requirements.txt'
+                    // sh 'python3 --version'
+                    sh 'echo "Installing Python dependencies..."'
+                    sh 'pip install -r app/requirements.txt'
                 }
             }
         }
