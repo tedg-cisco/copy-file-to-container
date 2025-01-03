@@ -45,9 +45,9 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            sh 'docker system prune -f' // Cleanup
-        }
-    }
+    // post {
+    //     always {
+    //         sh 'docker system prune -f' // Cleanup
+    //     }
+    // }
 }
