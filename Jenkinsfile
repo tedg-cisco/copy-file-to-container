@@ -14,14 +14,16 @@ pipeline {
                 checkout scm
             }
         }
-        // stage('Build Python App') {
-        //     steps {
-        //         script {
-        //             sh 'echo "Installing Python dependencies..."'
-        //             sh 'pip install -r app/requirements.txt'
-        //         }
-        //     }
-        // }
+        stage('Build Python App') {
+            steps {
+                script {
+                    sh 'docker --version'
+                    sh 'python3 --version'
+                    // sh 'echo "Installing Python dependencies..."'
+                    // sh 'pip install -r app/requirements.txt'
+                }
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-python-app ./app'
